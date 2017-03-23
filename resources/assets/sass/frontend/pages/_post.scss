@@ -27,6 +27,14 @@
         margin-bottom: 2rem;
     }
 
+    &__content {
+        p {
+            &:first-child {
+                font-size: 1.15rem;
+            }
+        }
+    }
+
     table {
         width: 100%;
         margin-bottom: 1rem;

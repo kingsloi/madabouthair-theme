@@ -1,0 +1,88 @@
+@mixin make-skewed-top {
+    &:before {
+        height: 2rem;
+        width: calc(100% - 1rem);
+        top: -2rem;
+        left: 1rem;
+        position: absolute;
+        background: linear-gradient(to top left, #fff 0%, #fff 50%, $brand-primary 50%, $brand-primary 100%);
+        z-index: -1;
+        transform: skewY(1.5deg);
+        content: none;
+
+        @include media-breakpoint-up(lg) {
+            content: "";
+        }
+    }
+}
+
+@mixin make-skewed-bottom {
+    &:after {
+        height: 2rem;
+        width: calc(100% - 1rem);
+        bottom: -2rem;
+        left: 1rem;
+        position: absolute;
+        background: linear-gradient(to bottom right, #fff 0%, #fff 50%, $brand-primary 50%, $brand-primary 100%);
+        z-index: -1;
+        transform: skewY(1.5deg);
+        content: none;
+
+        @include media-breakpoint-up(lg) {
+            content: "";
+        }
+    }
+}
+
+@mixin make-post {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        display: none;
+    }
+}
+
+@mixin make-post-inner {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    width: calc(100% - 1.5rem);
+
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        width: 40%;
+    }
+}
+
+@mixin make-post-excerpt {
+    margin-bottom: 0.75rem;
+}
+
+@mixin make-post-title {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $brand-primary;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+}
+
+@mixin transition-all {
+    transition: all 0.5s;
+}
+
+@mixin background-cover {
+    background-size: cover;
+}

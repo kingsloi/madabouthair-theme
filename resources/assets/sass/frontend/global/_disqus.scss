@@ -1,0 +1,16 @@
+.disqus {
+    margin-bottom: 3.75rem;
+
+    @include make-col-ready;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(9);
+
+        @include make-col-offset(1.5);
+    }
+
+
+    h2 {
+        text-align: left;
+    }
+}

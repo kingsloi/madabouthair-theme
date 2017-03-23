@@ -35,15 +35,14 @@
             <li class="nav-item {{ isActiveMatch('blog') }}">
                 <a class="nav-link" href="/blog">Blog</a>
             </li>
-            <li class="nav-item {{ isActiveURL('/reviews') }}">
-                <a class="nav-link" href="/reviews">Reviews</a>
-            </li>
             <li class="nav-item {{ isActiveURL('/contact') }}">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link" href="/contact-maddie-raspe">Contact</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control" type="text" placeholder="Search">
+        <form class="form-inline my-2 my-lg-0" method="GET" action="/search">
+            <input class="form-control" name="q" type="text" placeholder="Search"
+                value="{{ $query or '' }}"
+            >
         </form>
     </div>
 </nav>

@@ -1,12 +1,12 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 
+    @if(!empty(\Canvas\Models\Settings::disqus()))
+        @include('canvas::frontend.blog.partials.disqus')
+    @endif
+
     <div class="flower"></div>
 
     <div class="container-fluid">
-
-        @if(!empty(\Canvas\Models\Settings::disqus()))
-            @include('canvas::frontend.blog.partials.disqus')
-        @endif
 
         <ul>
             <li class="built-on">built on <a href="https://canvas.toddaustin.io" target="_blank">canvas</a></li>

@@ -8,12 +8,16 @@
 @import "global/footer";
 @import "global/animations";
 @import "global/pager";
+@import "global/mixins";
+@import "global/disqus";
 
 // Pages
-@import "pages/_index";
+@import "pages/_home";
+@import "pages/_contact";
 @import "pages/_post";
 @import "pages/_tag";
 @import "pages/_posts";
+@import "pages/_search";
 
 // Partials
 @import "partials/scroll-to-top";

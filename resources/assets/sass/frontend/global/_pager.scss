@@ -1,5 +1,5 @@
 .pagination {
-    margin-top: 2rem;
+    margin-top: 5rem;
 
     @include make-col-ready;
 
@@ -17,5 +17,16 @@
         list-style-type: none;
         font-size: 2rem;
         text-transform: uppercase;
+        width: 100%;
+
+        @include clearfix;
+
+        .previous {
+            float: left;
+        }
+
+        .next {
+            float: right;
+        }
     }
 }

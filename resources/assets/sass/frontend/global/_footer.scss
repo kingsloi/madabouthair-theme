@@ -4,14 +4,25 @@
 
     ul {
         font-size: 0.75rem;
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
 
         li {
-            display: inline-block;
+            margin-bottom: 0.5rem;
+
+            @include media-breakpoint-up(sm) {
+                display: inline-block;
+                margin-bottom: 0rem;
+            }
+
 
             + li {
                 &:before {
-                    content: "\00b7";
-                    margin: 0 5px;
+                    @include media-breakpoint-up(sm) {
+                        content: "\00b7";
+                        margin: 0 5px;
+                    }
                 }
             }
         }

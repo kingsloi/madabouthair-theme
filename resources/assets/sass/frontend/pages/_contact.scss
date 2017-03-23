@@ -1,0 +1,95 @@
+.contact {
+    @include media-breakpoint-up(md) {
+        @include make-col(9);
+
+        @include make-col-offset(1.5);
+    }
+
+
+    &__info {
+        @include make-col(12);
+
+        margin-bottom: 7.5rem;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 40px 81px;
+        padding-bottom: 3rem;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 0;
+            background-size: 80px 162px;
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            background-size: 100px 202.5px;
+        }
+
+
+        background-image: url(/vendor/canvas/assets/images/succulents/succulent-empty.svg);
+
+        html.no-svg & {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-empty.png);
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+            margin-top: 1.5rem;
+        }
+
+        li {
+            + li {
+                margin-top: 0.75rem;
+            }
+        }
+
+        a {
+            font-size: 1.25rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2rem;
+            }
+
+
+            display: block;
+
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+
+                .contact__title {
+                    // text
+
+                }
+            }
+        }
+
+        .fa {
+            display: inline-block;
+            color: $brand-primary;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            font-size: 1.87500rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 60px;
+        text-align: right;
+    }
+
+    &__title {
+        display: inline-block;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+}

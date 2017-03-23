@@ -14,6 +14,10 @@
         }
     }
 
+    &__excerpt {
+        margin-bottom: 0.75rem;
+    }
+
     h2 {
         @include make-post-title;
     }
@@ -50,37 +54,7 @@
     }
 
 
-    // &:before {
-    //     height: 2rem;
-    //     width: calc(100% - 1rem);
-    //     top: -2rem;
-    //     left: 1rem;
-    //     position: absolute;
-    //     background: linear-gradient(to top left, #fff 0%, #fff 50%, $brand-primary 50%, $brand-primary 100%);
-    //     z-index: -1;
-    //     transform: skewY(1.5deg);
-    //     content: none;
-
-    //     @include media-breakpoint-up(lg) {
-    //         content: "";
-    //     }
-    // }
-
-    &:after {
-        height: 2rem;
-        width: calc(100% - 1rem);
-        bottom: -2rem;
-        left: 1rem;
-        position: absolute;
-        background: linear-gradient(to bottom right, #fff 0%, #fff 50%, $brand-primary 50%, $brand-primary 100%);
-        z-index: -1;
-        transform: skewY(1.5deg);
-        content: none;
-
-        @include media-breakpoint-up(lg) {
-            content: "";
-        }
-    }
+    @include make-skewed-bottom;
 
     .category {
         background-image: url(http://placehold.it/500x500);
@@ -158,6 +132,29 @@
 
         &--beauty {
             background-image: url(/vendor/canvas/assets/images/categories/beauty.jpg);
+        }
+    }
+}
+
+.about {
+    margin: 10rem 0 0;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+
+        @include make-col-offset(3);
+    }
+
+
+    h2 {
+        line-height: 1.25;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        .fa {
+            margin-left: 5px;
         }
     }
 }

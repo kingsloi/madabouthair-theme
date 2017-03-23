@@ -14,18 +14,22 @@
 
     <article
         class="post-single"
-        itemscope itemtype="http://schema.org/BlogPosting"
+        itemscope itemtype="http://schema.org/Article"
+
     >
 
         @if ($post->page_image)
-            <img src="{{ asset($post->page_image) }}" class="post-single__hero">
+
+            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <img src="{{ asset($post->page_image) }}" class="post-single__hero" itemprop="url" alt="{{ $post->title }}">
+            </div>
+
         @endif
 
-        <header class="viewing">
-            <h1 class="viewing__title" itemprop="name">
+        <header class="viewing" itemprop="mainEntityOfPage">
+            <h1 class="viewing__title" itemprop="headline">
                 {{ $post->title }}
             </h1>
-            <meta itemprop="description" content="{{ $post->subtitle }}"/>
             <div class="post-meta">
                 <span class="post-meta__date">{{ $post->published_at->diffForHumans() }}</span>
                 <span class="post-meta__read-time">{{ $post->readingTime() }} minute read</span>
@@ -34,6 +38,22 @@
                         {!! implode(' ', $post->tagLinks()) !!}
                     </span>
                 @endunless
+
+                <div itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization" style="display: none;">
+                    <meta itemprop="name" content="{{ config('app.name') }}"/>
+                    <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="{{ asset('vendor/canvas/assets/images/mad-about-hair--md.png') }}"/>
+                        <meta itemprop="width" content="500"/>
+                        <meta itemprop="height" content="500"/>
+                    </div>
+                    <meta itemprop="name" content="{{ $post->title }}"/>
+                </div>
+
+                <meta itemprop="description" content="{{ $post->subtitle }}"/>
+                <meta itemprop="author" content="{{ $post->user->display_name }}"/>
+                <meta itemprop="datePublished" content="{{ $post->published_at->toIso8601String() }}"/>
+                <meta itemprop="dateModified" content="{{ $post->updated_at->toIso8601String() }}"/>
+
             </div>
         </header>
 
@@ -41,7 +61,6 @@
             {!! $post->content_html !!}
         </div>
 
-        {{-- @include('canvas::frontend.blog.partials.author') --}}
     </article>
 
     @include('canvas::frontend.blog.partials.paginate-post')

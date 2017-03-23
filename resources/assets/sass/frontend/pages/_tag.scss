@@ -13,6 +13,14 @@
     }
 
 
+    &--wide {
+        @include media-breakpoint-up(lg) {
+            @include make-col(9);
+
+            @include make-col-offset(1.5);
+        }
+    }
+
     &__title {
         margin-bottom: 1rem;
         display: inline-block;

@@ -23,6 +23,14 @@
         }
 
 
+        &--empty {
+            min-height: inherit;
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
         &__inner {
             @include make-post-inner;
 

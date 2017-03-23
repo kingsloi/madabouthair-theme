@@ -1,0 +1,21 @@
+.search {
+    .search-box {
+        @include make-col-ready;
+
+        margin-bottom: 2.5rem;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(9);
+
+            @include make-col-offset(1.5);
+        }
+
+
+        .form-control {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px dotted #ddd;
+            border-radius: 0px;
+        }
+    }
+}
