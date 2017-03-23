@@ -1,53 +1,34 @@
-.pager {
-    margin: 20px 0 20px 0;
+.post-single {
+    @include make-col-ready;
 
-    li {
-        > a,
-        > span {
-            color: #fff;
-            border: none;
+    @include media-breakpoint-up(md) {
+        @include make-col(9);
 
-            // @include sans-serif();
-            text-transform: uppercase;
-            font-size: 15px;
-            font-weight: 400;
-            padding: 15px 25px;
-            background-color: white;
+        @include make-col-offset(1.5);
+    }
+
+
+    .viewing {
+        @include media-breakpoint-up(lg) {
+            @include make-col(12);
+
+            @include make-col-offset(0);
         }
 
-        > a:hover,
-        > a:focus {
-            background-color: transparent;
-            border: none;
+
+        &__title {
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
     }
 
-    .disabled {
-        > a,
-        > a:hover,
-        > a:focus,
-        > span {
-            color: $gray;
-            background-color: $gray-dark;
-            cursor: not-allowed;
-        }
+    &__hero {
+        width: 100%;
+        margin-bottom: 2rem;
     }
-}
 
-img::selection {
-    color: white;
-    background: transparent;
-}
-
-img::-moz-selection {
-    color: white;
-    background: transparent;
-}
-
-ul.pager {
-    > li {
-        > a {
-            padding: 0px !important;
-        }
+    table {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }

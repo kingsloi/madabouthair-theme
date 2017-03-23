@@ -11,38 +11,39 @@
 @endif
 
 @section('content')
-    <article>
-        <div class="container" id="post">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    @if ($post->page_image)
-                        <div class="text-center">
-                            <img src="{{ asset($post->page_image) }}" class="post-hero">
-                        </div>
-                    @endif
-                    <h1 class="post-page-title">{{ $post->title }}</h1>
-                    <p class="post-page-meta">
-                        {{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }} &#183; {{ $post->readingTime() }} MIN READ
-                        @if ($post->tags->count())
-                            <br>
-                            {!! join(' ', $post->tagLinks()) !!}
-                        @endif
-                    </p>
 
-                    {!! $post->content_html !!}
+    <article
+        class="post-single"
+        itemscope itemtype="http://schema.org/BlogPosting"
+    >
 
-                    <p class="dts"><span>&#183;</span><span>&#183;</span><span>&#183;</span></p>
+        @if ($post->page_image)
+            <img src="{{ asset($post->page_image) }}" class="post-single__hero">
+        @endif
 
-                    @include('canvas::frontend.blog.partials.author')
-
-                </div>
+        <header class="viewing">
+            <h1 class="viewing__title" itemprop="name">
+                {{ $post->title }}
+            </h1>
+            <meta itemprop="description" content="{{ $post->subtitle }}"/>
+            <div class="post-meta">
+                <span class="post-meta__date">{{ $post->published_at->diffForHumans() }}</span>
+                <span class="post-meta__read-time">{{ $post->readingTime() }} minute read</span>
+                @unless ($post->tags->isEmpty())
+                    <span class="post-meta__tags">
+                        {!! implode(' ', $post->tagLinks()) !!}
+                    </span>
+                @endunless
             </div>
+        </header>
+
+        <div class="post-single__content" itemprop="articleBody">
+            {!! $post->content_html !!}
         </div>
+
+        {{-- @include('canvas::frontend.blog.partials.author') --}}
     </article>
 
     @include('canvas::frontend.blog.partials.paginate-post')
-@stop
 
-@section('unique-js')
-    <script src="{{ elixir('vendor/canvas/assets/js/frontend.js') }}" charset="utf-8"></script>
-@endsection
+@stop
