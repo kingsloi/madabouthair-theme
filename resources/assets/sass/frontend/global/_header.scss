@@ -1,0 +1,151 @@
+.masthead {
+    padding-top: 2rem;
+    position: relative;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .logo {
+        height: 150px;
+        width: 150px;
+
+        @include media-breakpoint-up(sm) {
+            height: 250px;
+            width: 250px;
+        }
+    }
+
+    .succulents {}
+
+    .succulent {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: top center;
+        top: 0;
+        background-size: 100%;
+
+        &--1 {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-1.svg);
+            height: 65.5px;
+            width: 35.5px;
+            right: 40px;
+            animation: 1s ease-out 0s 1 dropSucculents;
+
+            @include media-breakpoint-up(sm) {
+                height: 87.3333333px;
+                width: 47.3333333px;
+                right: 70px;
+            }
+
+
+            @include media-breakpoint-up(lg) {
+                height: 131px;
+                width: 71px;
+                left: 128px;
+                right: inherit;
+            }
+
+
+            html.no-svg & {
+                background-image: url(/vendor/canvas/assets/images/succulents/succulent-1.png);
+            }
+        }
+
+        &--2 {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-2.svg);
+            height: 113.5px;
+            width: 39px;
+            right: 70px;
+            top: 0px;
+            animation: 0.75s ease-out 0s 1 dropSucculents;
+
+            @include media-breakpoint-up(sm) {
+                height: 152px;
+                width: 52px;
+                right: 120px;
+            }
+
+
+            @include media-breakpoint-up(lg) {
+                height: 227px;
+                width: 78px;
+                right: 245px;
+                top: -30px;
+            }
+
+
+            html.no-svg & {
+                background-image: url(/vendor/canvas/assets/images/succulents/succulent-2.png);
+            }
+        }
+
+        &--3 {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-3.svg);
+            height: 148px;
+            width: 72px;
+            left: 5px;
+            animation: 0.5s ease-out 0s 1 dropSucculents;
+
+            @include media-breakpoint-up(sm) {
+                height: 197.3333333px;
+                width: 96px;
+                left: 5px;
+            }
+
+
+            @include media-breakpoint-up(lg) {
+                height: 296px;
+                width: 144px;
+                right: 32px;
+                left: inherit;
+            }
+
+
+            html.no-svg & {
+                background-image: url(/vendor/canvas/assets/images/succulents/succulent-3.png);
+            }
+        }
+
+        &--4 {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-2.svg);
+            height: 227px;
+            width: 78px;
+            left: 250px;
+            animation: 0.25s ease-out 0s 1 dropSucculents;
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+
+
+            html.no-svg & {
+                background-image: url(/vendor/canvas/assets/images/succulents/succulent-2.png);
+            }
+        }
+
+        &--5 {
+            background-image: url(/vendor/canvas/assets/images/succulents/succulent-1.svg);
+            height: 131px;
+            width: 71px;
+            right: 170px;
+            animation: 1.25s ease-out 0s 1 dropSucculents;
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+
+
+            html.no-svg & {
+                background-image: url(/vendor/canvas/assets/images/succulents/succulent-1.png);
+            }
+        }
+    }
+}

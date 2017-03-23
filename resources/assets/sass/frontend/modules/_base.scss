@@ -1,0 +1,104 @@
+// Brand
+$brand-primary: rgb(219, 184, 167);
+$brand-gold: #C69F73;
+
+// Colours from Maddie's logo
+// rgb(212, 164, 145);
+// rgb(116, 116, 115);
+// rgb(88, 58, 33);
+// rgb(114, 83, 57);
+// rgb(219, 184, 167);
+
+$input-color-placeholder: #ddd;
+
+// Fonts
+$font-family-serif: "Playfair Display", serif;
+$font-family-sans-serif: "Alice", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: $font-family-serif;
+
+// Buttons
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+
+html {
+    font-size: 16px;
+}
+
+.form-control {
+    font-family: $font-family-sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+    letter-spacing: -1px;
+}
+
+// Mixins
+
+@mixin make-post {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        display: none;
+    }
+}
+
+@mixin make-post-inner {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    width: calc(100% - 1.5rem);
+
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        width: 40%;
+    }
+}
+
+@mixin make-post-excerpt {
+    margin-bottom: 0.75rem;
+}
+
+@mixin make-post-title {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $brand-primary;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+}
+
+@mixin transition-all {
+    transition: all 0.5s;
+}
+
+@mixin background-cover {
+    background-size: cover;
+}
+
+// Typography
+@font-face {
+    font-family: 'Unthrift First Personal';
+    src: url("/vendor/canvas/assets/fonts/unthriftfirstpersonal.eot");
+    src: url("/vendor/canvas/assets/fonts/unthriftfirstpersonal.woff2") format("woff2"), url("/vendor/canvas/assets/fonts/unthriftfirstpersonal.woff") format("woff"), url("/vendor/canvas/assets/fonts/unthriftfirstpersonal.ttf") format("truetype"), url("/vendor/canvas/assets/fonts/unthriftfirstpersonal.svg") format("svg");
+}

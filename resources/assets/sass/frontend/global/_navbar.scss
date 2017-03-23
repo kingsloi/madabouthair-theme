@@ -1,0 +1,108 @@
+.navbar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(6);
+
+        @include make-col-offset(3);
+
+        margin-top: 2rem;
+    }
+
+
+    .navbar-nav {
+        .open > .nav-link,
+        .active > .nav-link,
+        .nav-link.open,
+        .nav-link.active {
+            color: $navbar-light-active-color;
+        }
+    }
+
+    .navbar-text {
+        color: $navbar-light-color;
+    }
+
+    .collapse.in {
+        display: block;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        align-self: center;
+        border-color: $navbar-light-toggler-border;
+        color: $navbar-light-active-color;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        border-color: transparent;
+        font-family: $font-family-serif;
+
+        @include hover-focus {
+            color: $navbar-light-active-color;
+        }
+
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+
+        .navbar-toggler-icon {
+            background-image: $navbar-light-toggler-bg;
+        }
+    }
+
+    .form-control {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px dotted #ddd;
+        border-radius: 0px;
+    }
+
+    .nav-item {
+        &.active {
+            @include media-breakpoint-up(lg) {
+                background-color: $brand-primary;
+            }
+
+
+            .nav-link {
+                color: #fff;
+                background-color: $brand-primary;
+
+                @include media-breakpoint-up(lg) {
+                    background-color: none;
+                }
+            }
+        }
+
+        + .nav-item {
+            @include media-breakpoint-up(md) {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .nav-link {
+        color: $navbar-light-color;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+        @include hover-focus {
+            color: $navbar-light-hover-color;
+        }
+
+
+        &.disabled {
+            color: $navbar-light-disabled-color;
+        }
+    }
+}

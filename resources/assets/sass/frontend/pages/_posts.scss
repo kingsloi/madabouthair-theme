@@ -1,0 +1,46 @@
+.posts {
+    @include media-breakpoint-up(md) {
+        @include make-row;
+    }
+
+
+    @include media-breakpoint-up(md) {
+        width: calc(100% + 1rem);
+    }
+
+
+    .post {
+        @include make-col-ready;
+
+        @include make-post;
+
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(md) {
+            min-height: 500px;
+            width: calc(50% - 1rem);
+            margin-left: 1rem;
+        }
+
+
+        &__inner {
+            @include make-post-inner;
+
+            width: calc(100% - 1.5rem) !important;
+        }
+
+        &__excerpt {
+            @include make-post-excerpt;
+        }
+
+        h2 {
+            @include make-post-title;
+        }
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

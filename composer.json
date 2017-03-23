@@ -1,0 +1,22 @@
+{
+    "name": "kingsloi/madbouthair-theme",
+    "description": "madabouthair - Canvas theme",
+    "keywords": ["madabouthair", "canvas", "laravel blog", "theme"],
+    "type": "canvas-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kingsley Raspe",
+            "email": "kingsley.raspe@googlemail.com"
+        }
+    ],
+    "extra": {
+        "canvas-theme": {
+            "title": "madabouthair",
+            "directories": {
+                "public": "public",
+                "views": "resources/views"
+            }
+        }
+    }
+}

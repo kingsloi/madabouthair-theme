@@ -1,0 +1,43 @@
+.site-footer {
+    margin-top: 3.75rem;
+    text-align: center;
+
+    ul {
+        font-size: 0.75rem;
+
+        li {
+            display: inline-block;
+
+            + li {
+                &:before {
+                    content: "\00b7";
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .flower {
+        background-image: url(/vendor/canvas/assets/images/succulents/flower.svg);
+        width: 165px;
+        height: 83px;
+        display: block;
+        margin: 0 auto 3.75rem;
+
+        html.no-svg & {
+            background-image: url(/vendor/canvas/assets/images/succulents/flower.png);
+        }
+    }
+
+    .fa-heart {
+        margin-left: 2.5px;
+        color: #e31b23;
+        animation: heartbeat 1.3s infinite;
+    }
+}
