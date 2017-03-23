@@ -1,4 +1,4 @@
-<img src="https://github.com/kingsloi/madabouthair-theme/raw/master/madabouthair.png">
+<img src="https://github.com/kingsloi/madabouthair-theme/raw/master/madabouthair.jpg">
 
 # madabouthair.online
 A minimal theme I made for my hair stylist wife.
