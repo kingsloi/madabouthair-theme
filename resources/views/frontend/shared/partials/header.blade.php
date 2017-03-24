@@ -12,13 +12,13 @@
         </a>
     @endif
 
-    <div class="succulents">
-        <div class="succulent succulent--1"></div>
-        <div class="succulent succulent--2"></div>
-        <div class="succulent succulent--3"></div>
-        <div class="succulent succulent--4"></div>
-        <div class="succulent succulent--5"></div>
-    </div>
+        <div class="succulents">
+            <div class="succulent succulent--1"></div>
+            <div class="succulent succulent--2"></div>
+            <div class="succulent succulent--3"></div>
+            <div class="succulent succulent--4"></div>
+            <div class="succulent succulent--5"></div>
+        </div>
 
 </header>
 
@@ -35,7 +35,7 @@
             <li class="nav-item {{ isActiveMatch('blog') }}">
                 <a class="nav-link" href="/blog">Blog</a>
             </li>
-            <li class="nav-item {{ isActiveURL('/contact') }}">
+            <li class="nav-item {{ isActiveURL('/contact-maddie-raspe') }}">
                 <a class="nav-link" href="/contact-maddie-raspe">Contact</a>
             </li>
         </ul>

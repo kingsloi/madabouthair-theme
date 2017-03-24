@@ -90,7 +90,7 @@
             height: 148px;
             width: 72px;
             left: 5px;
-            animation: 0.5s ease-out 0s 1 dropSucculents;
+            animation: 0.9s ease-out 0s 1 dropSucculents;
 
             @include media-breakpoint-up(sm) {
                 height: 197.3333333px;
@@ -117,7 +117,7 @@
             height: 227px;
             width: 78px;
             left: 250px;
-            animation: 0.25s ease-out 0s 1 dropSucculents;
+            animation: 0.75s ease-out 0s 1 dropSucculents;
             display: none;
 
             @include media-breakpoint-up(lg) {

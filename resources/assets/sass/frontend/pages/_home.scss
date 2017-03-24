@@ -57,13 +57,13 @@
     @include make-skewed-bottom;
 
     .category {
-        background-image: url(http://placehold.it/500x500);
+        background-image: url(http://placehold.it/1000x1000);
         min-height: 300px;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-size: 100%;
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         margin-bottom: 1rem;
@@ -85,6 +85,7 @@
             position: absolute;
             left: 0;
             top: 0;
+            text-align: center;
 
             @include media-breakpoint-up(md) {
                 position: inherit;
@@ -130,8 +131,14 @@
             background-image: url(/vendor/canvas/assets/images/categories/wedding.jpg);
         }
 
-        &--beauty {
-            background-image: url(/vendor/canvas/assets/images/categories/beauty.jpg);
+        &--products {
+            // background-image: url(/vendor/canvas/assets/images/categories/beauty.jpg);
+
+        }
+
+        &--photoshoots {
+            // background-image: url(/vendor/canvas/assets/images/categories/beauty.jpg);
+
         }
     }
 }

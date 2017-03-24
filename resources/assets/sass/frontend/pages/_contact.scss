@@ -46,13 +46,12 @@
 
         a {
             font-size: 1.25rem;
+            display: inline-block;
 
             @include media-breakpoint-up(md) {
                 font-size: 2rem;
             }
 
-
-            display: block;
 
             &:hover,
             &:active,
@@ -91,5 +90,45 @@
 
     h1 {
         margin-bottom: 1rem;
+    }
+
+    .accepting {
+        margin-top: 3rem;
+
+        h2 {
+            @extend .h6;
+        }
+
+        .cards {
+            .fa {
+                color: #ddd;
+                display: inline-block;
+                font-size: 1.5rem;
+            }
+        }
+
+        .fa-cc-visa {
+            &:hover {
+                color: #1a1f71;
+            }
+        }
+
+        .fa-cc-mastercard {
+            &:hover {
+                color: #cc0000;
+            }
+        }
+
+        .fa-cc-amex {
+            &:hover {
+                color: #4d4f53;
+            }
+        }
+
+        .fa-cc-discover {
+            &:hover {
+                color: #ff6e0c;
+            }
+        }
     }
 }

@@ -1,9 +1,9 @@
 @extends('canvas::frontend.layout')
 
 @if (isset($tag->title))
-    @section('title', \Canvas\Models\Settings::blogTitle().' | '.$tag->title)
+    @section('title', $tag->title . ' | Blog | ' . \Canvas\Models\Settings::blogTitle())
 @else
-    @section('title', \Canvas\Models\Settings::blogTitle().' | Blog')
+    @section('title', 'Blog | ' . \Canvas\Models\Settings::blogTitle())
 @endif
 @section('og-title', \Canvas\Models\Settings::blogTitle())
 @section('twitter-title', \Canvas\Models\Settings::blogTitle())
