@@ -4,6 +4,7 @@
         @include('canvas::backend.shared.partials.meta')
         @yield('title')
         @include('canvas::backend.shared.partials.css')
+        @yield('unique-css')
     </head>
     <body>
         @yield('content')

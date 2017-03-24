@@ -10,32 +10,12 @@
         @include make-col(12);
 
         margin-bottom: 7.5rem;
-        background-repeat: no-repeat;
-        background-position: bottom right;
-        background-size: 40px 81px;
-        padding-bottom: 3rem;
-
-        @include media-breakpoint-up(md) {
-            padding-bottom: 0;
-            background-size: 80px 162px;
-        }
-
-
-        @include media-breakpoint-up(lg) {
-            background-size: 100px 202.5px;
-        }
-
-
-        background-image: url(/vendor/canvas/assets/images/succulents/succulent-empty.svg);
-
-        html.no-svg & {
-            background-image: url(/vendor/canvas/assets/images/succulents/succulent-empty.png);
-        }
 
         ul {
             padding-left: 0;
             list-style-type: none;
             margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         li {
@@ -101,7 +81,7 @@
 
         .cards {
             .fa {
-                color: #ddd;
+                color: $navbar-light-color;
                 display: inline-block;
                 font-size: 1.5rem;
             }

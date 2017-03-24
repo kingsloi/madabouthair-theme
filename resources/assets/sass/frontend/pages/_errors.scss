@@ -1,0 +1,11 @@
+.404-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-size: 100%;
+
+    @include media-breakpoint-up(lg) {
+        width: 500px;
+        height: 515px;
+    }
+}
