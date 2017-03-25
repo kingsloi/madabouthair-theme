@@ -166,6 +166,50 @@
     }
 }
 
+.quotes {
+    margin: 4rem 0 0;
+
+    @include media-breakpoint-up(md) {
+        margin: 8rem 0 0;
+    }
+
+
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+
+        @include make-col-offset(3);
+    }
+
+
+    .blockquote {
+        border: 0 !important;
+        line-height: 1.25;
+        font-size: 2rem;
+
+        @extend .h2;
+    }
+
+    .quote-icon {
+        margin: 0 auto 4rem;
+        background-repeat: no-repeat;
+        background-position: top center;
+        text-align: center;
+        background-image: url(/vendor/canvas/assets/images/quote.svg);
+        height: 64px;
+        width: 64px;
+
+        html.no-svg & {
+            background-image: url(/vendor/canvas/assets/images/quote.png);
+        }
+    }
+
+    &__pagination {
+        margin-top: 2rem;
+    }
+}
+
 .instagram {
     margin-top: 5rem;
 

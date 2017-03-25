@@ -1,3 +1,21 @@
+<!--
+          __   _____                      _ _   _
+         / /  / ____|                    | | | (_)
+        / /  | |     ___  _ __  ___ _   _| | |_ _ _ __   __ _
+       / /   | |    / _ \| '_ \/ __| | | | | __| | '_ \ / _` |
+      / /    | |___| (_) | | | \__ \ |_| | | |_| | | | | (_| |_
+     /_/      \_____\___/|_| |_|___/\__,_|_|\__|_|_| |_|\__, (_)
+                                                         __/ |
+                                                        |___/
+
+      By: Forwardslash Consulting Limted (UK)
+     URL: http://forwardslashconsulting.co.uk
+     For: My Beautiful Wife, Madeline.
+    Year: 2017
+    Tech: Laravel, Canvas (blog), Canvas Paper (blog starter theme)
+          SCSS, ES6, Gulp, Wallop, Bootstrap v4, Disqus, etc.
+
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
