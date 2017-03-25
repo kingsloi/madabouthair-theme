@@ -170,7 +170,7 @@
     margin: 4rem 0 0;
 
     @include media-breakpoint-up(md) {
-        margin: 8rem 0 0;
+        margin: 9rem 0 0;
     }
 
 
@@ -196,12 +196,12 @@
         background-repeat: no-repeat;
         background-position: top center;
         text-align: center;
-        background-image: url(/vendor/canvas/assets/images/quote.svg);
+        background-image: url(/vendor/canvas/assets/images/quote--skewed.svg);
         height: 64px;
         width: 64px;
 
         html.no-svg & {
-            background-image: url(/vendor/canvas/assets/images/quote.png);
+            background-image: url(/vendor/canvas/assets/images/quote--skewed.png);
         }
     }
 

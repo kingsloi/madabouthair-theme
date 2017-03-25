@@ -1,3 +1,4 @@
+@if (App::environment('production', 'staging'))
 <!--
           __   _____                      _ _   _
          / /  / ____|                    | | | (_)
@@ -16,6 +17,7 @@
           SCSS, ES6, Gulp, Wallop, Bootstrap v4, Disqus, etc.
 
 -->
+@endif
 <!DOCTYPE html>
 <html lang="en">
     <head>
