@@ -226,21 +226,24 @@
         padding: 1rem 0;
         font-size: 0.85rem;
         text-align: center;
-        color: $gray;
+        color: #fff;
         margin-bottom: 0;
 
         a {
-            color: $gray;
+            color: #fff;
         }
     }
 
     #instafeed {
         @include clearfix;
 
+        color: #fff;
+
         > a {
             display: block;
             float: left;
             position: relative;
+            color: #fff;
 
             @include make-col(6);
 

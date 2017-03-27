@@ -1,5 +1,5 @@
 /**
- * Packages
+ * Imports
  */
 import tether from 'tether';
 import scroller from 'scrollpos-styler';
@@ -63,6 +63,8 @@ $(document).ready(function($) {
     const wallopEl = document.querySelector('.Wallop');
     const slider = new Wallop(wallopEl);
     const paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
+    const autoPlayMs = 3000;
+    let nextTimeout;
 
     paginationDots.forEach(function (dotEl, index) {
       dotEl.addEventListener('click', function() {
@@ -70,9 +72,19 @@ $(document).ready(function($) {
       });
     });
 
+    const loadNext = () => {
+      var nextIndex = (slider.currentItemIndex + 1) % slider.allItemsArray.length;
+      slider.goTo(nextIndex);
+    };
+
+    nextTimeout = setTimeout(function() { loadNext(); }, autoPlayMs);
+
     slider.on('change', function(event) {
       removeClass(document.querySelector('.Wallop-dot--current'), 'Wallop-dot--current');
       addClass(paginationDots[event.detail.currentItemIndex], 'Wallop-dot--current');
+
+      clearTimeout(nextTimeout);
+      nextTimeout = setTimeout(function() { loadNext(); }, autoPlayMs);
     });
   }
 

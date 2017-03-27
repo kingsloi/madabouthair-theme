@@ -9,3 +9,4 @@ npm-debug.log
 phpunit.xml
 Thumbs.db
 vendor
+!/vendor/kingsloi/madbouthair-theme/resources/assets
