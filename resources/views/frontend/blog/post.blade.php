@@ -2,8 +2,8 @@
 
 @section('og-title', $post->title)
 @section('twitter-title', $post->title)
-@section('og-description', addslashes($post->subtitle))
-@section('twitter-description', addslashes($post->subtitle))
+@section('og-description', $post->meta_description)
+@section('twitter-description', $post->meta_description)
 @section('title', $post->title . ' | Blog | ' . \Canvas\Models\Settings::blogTitle())
 @if ($post->page_image)
     @section('og-image', url( $post->page_image ))
