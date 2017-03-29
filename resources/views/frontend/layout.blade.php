@@ -31,6 +31,7 @@
         @include('canvas::frontend.shared.partials.footer')
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58db2541aa758a28"></script>
         <script src="{{ elixir('vendor/canvas/assets/js/frontend.js') }}" charset="utf-8"></script>
     </body>
 </html>
