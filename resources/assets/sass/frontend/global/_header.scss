@@ -1,19 +1,22 @@
 .masthead {
     padding-top: 2rem;
     position: relative;
+    display: flex;
 
     h1 {
-        margin-bottom: 0;
+        margin: 0 auto;
     }
 
-    img {
+    > a {
+        display: inline-block;
         margin: 0 auto;
-        display: block;
     }
 
     .logo {
         height: 150px;
         width: 150px;
+        margin: 0 auto;
+        display: block;
 
         @include media-breakpoint-up(sm) {
             height: 250px;

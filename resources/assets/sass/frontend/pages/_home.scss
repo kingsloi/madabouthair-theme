@@ -253,6 +253,27 @@
             &:hover {
                 text-decoration: none;
 
+                &:before {
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    content: '\f16d';
+                    position: absolute;
+                    top: 35%;
+                    left: 35%;
+
+                    @include media-breakpoint-up(md) {
+                        top: 40%;
+                        left: 40%;
+                    }
+
+
+                    font-size: 4rem;
+                }
+
                 &:after {
                     background: #fff;
                     position: absolute;

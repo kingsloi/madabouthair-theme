@@ -33,6 +33,7 @@ $(document).ready(function($) {
         accessToken: '4788727853.1677ed0.ffb8ddc3257f4edd9837b417e900becc',
         limit: 8,
         resolution: 'standard_resolution',
+        template: '<a href="{{link}}" target="_blank" title="{{caption}}"><img src="{{image}}" /></a>',
       });
 
       feed.run();
