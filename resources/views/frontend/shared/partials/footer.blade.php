@@ -17,9 +17,9 @@
     </div>
 </footer>
 
-<span id="scroll-to-top" class="sps">
+{{-- <span id="scroll-to-top" class="sps">
     <a class="btn btn-primary" href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-</span>
+</span> --}}
 
 @if (!empty(\Canvas\Models\Settings::gaId()))
     @include('canvas::frontend.blog.partials.analytics')
