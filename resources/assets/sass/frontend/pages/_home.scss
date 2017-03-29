@@ -18,6 +18,15 @@
         margin-bottom: 0.75rem;
     }
 
+    .from-the-blog {
+        margin-bottom: 0.5rem;
+        display: block;
+        color: $gray-dark;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
     h2 {
         @include make-post-title;
     }

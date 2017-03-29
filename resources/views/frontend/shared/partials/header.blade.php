@@ -33,7 +33,19 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item {{ isActiveMatch('blog') }}">
-                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link dropdown-toggle" href="/blog" id="blogCategoriesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="blogCategoriesMenu">
+                    <a class="dropdown-item" href="/blog">Blog Home</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/blog?tag=weddings">Weddings</a>
+                    <a class="dropdown-item" href="/blog?tag=diy">DIY</a>
+                    <a class="dropdown-item" href="/blog?tag=photoshoots">Photoshoots</a>
+                    <a class="dropdown-item" href="/blog?tag=products">Products</a>
+                    <a class="dropdown-item" href="/blog?tag=hair">Hair</a>
+                </div>
+
             </li>
             <li class="nav-item {{ isActiveURL('/contact-maddie-raspe') }}">
                 <a class="nav-link" href="/contact-maddie-raspe">Contact</a>
