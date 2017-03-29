@@ -57,7 +57,7 @@
     @include make-skewed-bottom;
 
     .category {
-        background-image: url(http://placehold.it/1000x1000);
+        background-image: url(/vendor/canvas/assets/images/placeholder.png);
         min-height: 300px;
         position: relative;
         display: flex;
