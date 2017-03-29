@@ -29,5 +29,6 @@ elixir(function (mix) {
 
             // JS files
             assetsPath + 'js/frontend.js',
+            assetsPath + 'js/modernizr-custom.js',
         ]);
 });
