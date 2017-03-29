@@ -3,7 +3,7 @@
  */
 import tether from 'tether';
 import scroller from 'scrollpos-styler';
-import Wallop from 'Wallop';
+import Wallop from 'wallop';
 global.Tether = tether;
 const boostrap = require('bootstrap');
 const Instafeed = require("instafeed.js");
