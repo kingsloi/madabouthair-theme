@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "easyphotoswiper": "^1.0.12",
     "instafeed.js": "^1.4.1",
     "scrollpos-styler": "^0.6.1",
     "wallop": "^2.4.1"

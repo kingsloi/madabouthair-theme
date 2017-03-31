@@ -3,6 +3,10 @@
 @import "../../../../node_modules/bootstrap/scss/bootstrap";
 @import "modules/_wallop";
 
+$images_url: "/vendor/canvas/assets/images/";
+
+@import "../../../../node_modules/easyphotoswiper/src/easyphotoswiper";
+
 // Layouts
 @import "global/header";
 @import "global/navbar";

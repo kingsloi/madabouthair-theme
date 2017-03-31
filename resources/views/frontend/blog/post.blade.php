@@ -13,12 +13,12 @@
 @section('content')
 
     <article
-        class="post-single"
+        class="post-single @if(count($images) > 0) post-single--wide @endif"
         itemscope itemtype="http://schema.org/Article"
 
     >
 
-        @if ($post->page_image)
+        @if ($post->page_image && count($images) === 0)
 
             <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
               <img src="{{ asset($post->page_image) }}" class="post-single__hero" itemprop="url" alt="{{ $post->title }}">
@@ -58,7 +58,33 @@
         </header>
 
         <div class="post-single__content" itemprop="articleBody">
-            {!! $post->content_html !!}
+
+            @if(count($images) > 0)
+                <div class="row">
+                    <div class="post-single__images">
+                        <div class="c-gallery-list js-gallery">
+                            @foreach ($images as $image)
+                                <div class="c-gallery-list__item js-gallery__item">
+                                    <div class="c-gallery-item">
+                                        <a href="{{ $image['src'] }}" itemprop="contentUrl" data-size="{{ $image['width'] }}x{{ $image['height'] }}" class="c-gallery-item__inner js-gallery__link">
+                                            <figure class="o-image">
+                                                <img class="o-image__media" src="{{ $image['src'] }}" alt="{{ $image['alt'] }}" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div class="post-single__sections">
+                        {!! $post->content_html !!}
+                    </div>
+                </div>
+            @else
+                {!! $post->content_html !!}
+            @endif
+
         </div>
 
     </article>

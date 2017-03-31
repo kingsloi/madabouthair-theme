@@ -4,6 +4,7 @@
 import tether from 'tether';
 import scroller from 'scrollpos-styler';
 import Wallop from 'wallop';
+import EasyPhotoSwiper from 'easyphotoswiper'
 global.Tether = tether;
 const boostrap = require('bootstrap');
 const Instafeed = require("instafeed.js");
@@ -58,13 +59,26 @@ $(document).ready(function($) {
   });
 
   /**
+   * PhotoGallery
+   */
+  if ($('.js-gallery').length > 0) {
+    const PhotoGallery = new EasyPhotoSwiper({
+      wrap: '.js-gallery',
+      item: '.js-gallery__item',
+      link: '.js-gallery__link',
+      image: 'img',
+    });
+    PhotoGallery.init();
+  }
+
+  /**
    * Slider
    */
   if($('.Wallop').length > 0) {
     const wallopEl = document.querySelector('.Wallop');
     const slider = new Wallop(wallopEl);
     const paginationDots = Array.prototype.slice.call(document.querySelectorAll('.Wallop-dot'));
-    const autoPlayMs = 3000;
+    const autoPlayMs = 7500;
     let nextTimeout;
 
     paginationDots.forEach(function (dotEl, index) {
