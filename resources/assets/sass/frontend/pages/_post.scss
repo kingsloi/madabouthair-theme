@@ -100,17 +100,32 @@
             }
 
             + blockquote {
+                margin-left: 1.5rem;
+                margin-top: 1.5rem;
+                position: relative;
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 0.75rem;
+                    margin-left: 0rem;
+                }
+
+
                 &:before {
                     background-image: url(/vendor/canvas/assets/images/quote--skewed.svg);
-                    height: 22px;
                     display: block;
                     content: '';
                     height: 32px;
                     width: 32px;
+                    left: -1rem;
+                    top: -1rem;
                     position: absolute;
-                    left: -2rem;
                     background-size: 32px;
                     background-repeat: no-repeat;
+
+                    @include media-breakpoint-up(md) {
+                        left: -2rem;
+                        top: -0.5rem;
+                    }
                 }
 
                 p {
