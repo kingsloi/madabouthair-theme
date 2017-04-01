@@ -79,7 +79,8 @@
 
             + p,
             + ul,
-            + ol {
+            + ol,
+            + blockquote {
                 margin-bottom: 2rem;
                 font-size: 1rem;
                 margin-top: 0.75rem;
@@ -97,6 +98,26 @@
             + ol {
                 padding-left: 2rem;
             }
+
+            + blockquote {
+                &:before {
+                    background-image: url(/vendor/canvas/assets/images/quote--skewed.svg);
+                    height: 22px;
+                    display: block;
+                    content: '';
+                    height: 32px;
+                    width: 32px;
+                    position: absolute;
+                    left: -2rem;
+                    background-size: 32px;
+                    background-repeat: no-repeat;
+                }
+
+                p {
+                    padding-top: 1rem;
+                    font-style: italic;
+                }
+            }
         }
     }
 
@@ -104,4 +125,8 @@
         width: 100%;
         margin-bottom: 1rem;
     }
+}
+
+html.no-svg .post-single__sections blockquote {
+    background-image: url(/vendor/canvas/assets/images/quote--skewed.png);
 }
