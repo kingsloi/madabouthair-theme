@@ -78,6 +78,9 @@
                     </div>
 
                     <div class="post-single__sections">
+                        @if($post->subtitle)
+                            <p class="mb-4">{{ $post->subtitle }}</p>
+                        @endif
                         {!! $post->content_html !!}
                     </div>
                 </div>
