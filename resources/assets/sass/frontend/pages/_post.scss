@@ -52,86 +52,132 @@
         }
     }
 
-    &__images {
-        @include make-col-ready;
+    &--wedding {
+        .post-single__images {
+            @include make-col-ready;
 
-        @include media-breakpoint-up(md) {
-            @include make-col(4);
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
 
-            @include make-col-offset(0.5);
+                @include make-col-offset(0.5);
+            }
+        }
+
+        .post-single__sections {
+            @include make-col-ready;
+
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+
+                @include make-col-offset(0.5);
+            }
         }
     }
 
-    &__sections {
-        @include make-col-ready;
+    &--photoshoot {
+        .post-single__images {
+            @include make-col-ready;
 
-        @include media-breakpoint-up(md) {
-            @include make-col(6);
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
 
-            @include make-col-offset(0.5);
+                @include make-col-offset(0.5);
+            }
         }
 
+        .post-single__sections {
+            @include make-col-ready;
 
-        h2 {
-            border-bottom: 5px solid $brand-primary;
-            display: inline-block;
-            padding-bottom: 5px;
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
 
-            + p,
-            + ul,
-            + ol,
-            + blockquote {
-                margin-bottom: 2rem;
-                font-size: 1rem;
+                @include make-col-offset(0.5);
+            }
+        }
+
+        .c-gallery-list {
+            @include make-row;
+        }
+
+        .c-gallery-list__item {
+            @include make-col-ready;
+
+            @include make-col(6);
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(4);
+            }
+
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            }
+        }
+
+        .o-image {
+            margin-bottom: 2rem;
+        }
+    }
+
+    h2 {
+        border-bottom: 5px solid $brand-primary;
+        display: inline-block;
+        padding-bottom: 5px;
+
+        + p,
+        + ul,
+        + ol,
+        + blockquote {
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            margin-top: 0.75rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
+        }
+
+        + p {
+            padding-left: 0.5rem;
+        }
+
+        + ul,
+        + ol {
+            padding-left: 2rem;
+        }
+
+        + blockquote {
+            margin-left: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+
+            @include media-breakpoint-up(md) {
                 margin-top: 0.75rem;
+                margin-left: 0rem;
+            }
+
+
+            &:before {
+                background-image: url(/vendor/canvas/assets/images/quote--skewed.svg);
+                display: block;
+                content: '';
+                height: 32px;
+                width: 32px;
+                left: -1rem;
+                top: -1rem;
+                position: absolute;
+                background-size: 32px;
+                background-repeat: no-repeat;
 
                 @include media-breakpoint-up(md) {
-                    font-size: 1.25rem;
+                    left: -2rem;
+                    top: -0.5rem;
                 }
             }
 
-            + p {
-                padding-left: 0.5rem;
-            }
-
-            + ul,
-            + ol {
-                padding-left: 2rem;
-            }
-
-            + blockquote {
-                margin-left: 1.5rem;
-                margin-top: 1.5rem;
-                position: relative;
-
-                @include media-breakpoint-up(md) {
-                    margin-top: 0.75rem;
-                    margin-left: 0rem;
-                }
-
-
-                &:before {
-                    background-image: url(/vendor/canvas/assets/images/quote--skewed.svg);
-                    display: block;
-                    content: '';
-                    height: 32px;
-                    width: 32px;
-                    left: -1rem;
-                    top: -1rem;
-                    position: absolute;
-                    background-size: 32px;
-                    background-repeat: no-repeat;
-
-                    @include media-breakpoint-up(md) {
-                        left: -2rem;
-                        top: -0.5rem;
-                    }
-                }
-
-                p {
-                    padding-top: 1rem;
-                    font-style: italic;
-                }
+            p {
+                padding-top: 1rem;
+                font-style: italic;
             }
         }
     }
