@@ -4,7 +4,7 @@
     </h1>
     <div class="post-meta">
         <span class="post-meta__date">{{ $post->published_at->diffForHumans() }}</span>
-        <span class="post-meta__read-time">{{ (($latest->readingTime() > 1) ? $latest->readingTime() : '1' ) }} minute read</span>
+        <span class="post-meta__read-time">{{ (($post->readingTime() > 1) ? $post->readingTime() : '1' ) }} minute read</span>
         @unless ($post->tags->isEmpty())
             <span class="post-meta__tags">
                 {!! implode(' ', $post->tagLinks()) !!}
