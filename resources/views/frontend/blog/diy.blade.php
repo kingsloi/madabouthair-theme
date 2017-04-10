@@ -12,7 +12,10 @@
 
 @section('content')
 
-    <article class="post-single post-single--generic" itemscope itemtype="http://schema.org/Article">
+    <article
+        class="post-single post-single--wide post-single--diy"
+        itemscope itemtype="http://schema.org/Article"
+    >
 
         @if ($post->page_image)
             <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">

@@ -52,6 +52,88 @@
         }
     }
 
+    &--diy {
+        .post-single__hero {
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+
+                @include make-col-offset(1.5);
+            }
+        }
+
+        .post-single__content {
+            @include media-breakpoint-up(md) {
+                @include make-col(10);
+
+                @include make-col-offset(1);
+            }
+
+
+            ul,
+            ol {
+                padding-left: 0;
+
+                li {
+                    clear: both;
+                    margin: 2rem 0;
+                    overflow: hidden;
+                    font-size: 1rem;
+                    position: relative;
+                    padding: 2rem 0 3rem;
+                    text-align: center;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 1.25rem;
+                    }
+
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        width: 50%;
+                        border-bottom: 1px solid $brand-primary;
+                        bottom: 0;
+                        left: 25%;
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                        padding-top: 0;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
+                    }
+
+                    .c-gallery-list__item {
+                        @include make-col(5);
+                    }
+
+                    &.item--has-image {
+                        padding: 2rem 0;
+                        text-align: left;
+
+                        &:nth-child(even) {
+                            .c-gallery-list__item {
+                                float: right;
+                                margin-left: 2rem;
+                            }
+                        }
+
+                        &:nth-child(odd) {
+                            .c-gallery-list__item {
+                                float: left;
+                                margin-right: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &--wedding {
         .post-single__images {
             @include make-col-ready;
@@ -112,6 +194,18 @@
         .o-image {
             margin-bottom: 2rem;
         }
+    }
+
+    .c-gallery-list {
+        &__item {
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .o-image {
+        margin-bottom: 2rem;
     }
 
     h2 {
