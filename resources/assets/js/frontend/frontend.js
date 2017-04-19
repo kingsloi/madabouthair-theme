@@ -106,10 +106,12 @@ $(document).ready(function($) {
   /**
    * Comparison
    */
-  const divisor = document.getElementById("divisor");
-  const slider = document.getElementById("slider");
+  if($('#comparison').length > 0) {
+    const divisor = document.getElementById("divisor");
+    const slider = document.getElementById("slider");
 
-  slider.addEventListener('input', function() {
-        divisor.style.width = slider.value+"%";
-  });
+    slider.addEventListener('input', function() {
+          divisor.style.width = slider.value+"%";
+    });
+  }
 });
