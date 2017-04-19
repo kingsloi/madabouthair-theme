@@ -103,4 +103,13 @@ $(document).ready(function($) {
     });
   }
 
+  /**
+   * Comparison
+   */
+  const divisor = document.getElementById("divisor");
+  const slider = document.getElementById("slider");
+
+  slider.addEventListener('input', function() {
+        divisor.style.width = slider.value+"%";
+  });
 });

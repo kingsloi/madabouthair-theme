@@ -8,6 +8,23 @@
     }
 
 
+    .disclaimer {
+        font-size: 0.85rem !important;
+        border: 1px solid $brand-primary;
+        padding: 0.5rem 1rem;
+        font-style: italic;
+
+        + p {
+            font-size: 1.15rem;
+        }
+
+        + ul, + ol {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-size: 1.25rem;
+        }
+    }
+
     .viewing {
         @include media-breakpoint-up(lg) {
             @include make-col(12);
@@ -154,6 +171,25 @@
                 @include make-col-offset(0.5);
             }
         }
+
+        h2 {
+            + p,
+            + ul,
+            + ol,
+            + blockquote {
+                margin-bottom: 2rem;
+                font-size: 1rem;
+                margin-top: 0.75rem;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 1.25rem;
+                }
+            }
+
+            + p {
+                padding-left: 0.5rem;
+            }
+        }
     }
 
     &--photoshoot {
@@ -208,27 +244,17 @@
         margin-bottom: 2rem;
     }
 
-    h2 {
+    p {
+        + h2 {
+            margin-top: 1rem;
+        }
+    }
+
+    h2, h3 {
         border-bottom: 5px solid $brand-primary;
         display: inline-block;
         padding-bottom: 5px;
-
-        + p,
-        + ul,
-        + ol,
-        + blockquote {
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            margin-top: 0.75rem;
-
-            @include media-breakpoint-up(md) {
-                font-size: 1.25rem;
-            }
-        }
-
-        + p {
-            padding-left: 0.5rem;
-        }
+        margin-bottom: 1rem;
 
         + ul,
         + ol {
@@ -274,6 +300,12 @@
     table {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    &-slug--microblading {
+        .post-single__hero {
+            display: none;
+        }
     }
 }
 
