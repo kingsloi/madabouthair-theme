@@ -67,6 +67,10 @@
                 font-size: 1.15rem;
             }
         }
+
+        .heading-bugfix {
+            @extend .h2;
+        }
     }
 
     &--diy {
@@ -250,7 +254,7 @@
         }
     }
 
-    h2, h3 {
+    h2, h3, .heading-bugfix {
         border-bottom: 5px solid $brand-primary;
         display: inline-block;
         padding-bottom: 5px;
@@ -305,6 +309,48 @@
     &-slug--microblading {
         .post-single__hero {
             display: none;
+        }
+    }
+
+    &--tutorial {
+        .post-single__content {
+            ol {
+                list-style-type: none;
+                padding-left: 0;
+                margin-bottom: 5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                li {
+                    margin-bottom: 1.75rem;
+                    font-size: 1.25rem;
+                }
+            }
+
+            .c-gallery-list__item {
+                margin-top: 1.75rem;
+                box-shadow: $popover-box-shadow;
+            }
+
+            > .c-gallery-list__item {
+                width: 75%;
+                margin: 1.75rem auto 1rem;
+            }
+
+            .item--has-image {
+                .c-gallery-list__item {
+                    width: 50%;
+                    margin: 1.75rem auto 0;
+                }
+            }
+
+            .step-count {
+                font-weight: bold;
+                font-family: $font-family-serif;
+                margin-right: 2.5px;
+            }
         }
     }
 }

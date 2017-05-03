@@ -2,7 +2,7 @@
 
         <title>@yield('title')</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Alice|Playfair+Display" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alice|Playfair+Display:400,900" rel="stylesheet">
 
         <!-- SEO Tags -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
