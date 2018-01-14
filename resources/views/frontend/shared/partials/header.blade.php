@@ -40,10 +40,8 @@
                     <a class="dropdown-item" href="/blog">Blog Home</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/blog?tag=weddings">Weddings</a>
-                    <a class="dropdown-item" href="/blog?tag=diy">DIY</a>
                     <a class="dropdown-item" href="/blog?tag=photoshoots">Photoshoots</a>
-                    <a class="dropdown-item" href="/blog?tag=products">Products</a>
-                    <a class="dropdown-item" href="/blog?tag=hair">Hair</a>
+                    <a class="dropdown-item" href="/blog?tag=salon">Salon</a>
                 </div>
 
             </li>

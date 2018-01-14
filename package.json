@@ -5,25 +5,23 @@
     "dev": "gulp watch"
   },
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "bootstrap-sass": "^3.3.7",
+    "easyphotoswiper": "^1.0.12",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-notify": "~2.2.0",
     "gulp-rename": "~1.2.2",
+    "instafeed.js": "^1.4.1",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-11",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.8",
     "lodash": "^4.16.2",
+    "scrollpos-styler": "^0.6.1",
     "tether": "^1.4.0",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
-  },
-  "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "easyphotoswiper": "^1.0.12",
-    "instafeed.js": "^1.4.1",
-    "scrollpos-styler": "^0.6.1",
+    "vue-resource": "^1.0.3",
     "wallop": "^2.4.1"
   }
 }
